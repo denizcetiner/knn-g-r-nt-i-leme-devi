@@ -97,6 +97,28 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Dataset\A_1.bmp" />
+    <Resource Include="Dataset\A_2.bmp" />
+    <Resource Include="Dataset\A_3.bmp" />
+    <Resource Include="Dataset\A_4.bmp" />
+    <Resource Include="Dataset\A_5.bmp" />
+    <Resource Include="Dataset\B_1.bmp" />
+    <Resource Include="Dataset\B_2.bmp" />
+    <Resource Include="Dataset\B_3.bmp" />
+    <Resource Include="Dataset\B_4.bmp" />
+    <Resource Include="Dataset\C_1.bmp" />
+    <Resource Include="Dataset\C_2.bmp" />
+    <Resource Include="Dataset\C_3.bmp" />
+    <Resource Include="Dataset\C_4.bmp" />
+    <Resource Include="Dataset\D_1.bmp" />
+    <Resource Include="Dataset\D_2.bmp" />
+    <Resource Include="Dataset\D_3.bmp" />
+    <Resource Include="Dataset\D_4.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="input.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

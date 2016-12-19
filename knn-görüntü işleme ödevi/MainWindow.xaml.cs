@@ -25,6 +25,7 @@ namespace knn_görüntü_işleme_ödevi
     {
         private List<String> Dataset = new List<string>();
         private String File = "";
+        private int k = 3;
 
         public MainWindow()
         {
@@ -103,17 +104,36 @@ namespace knn_görüntü_işleme_ödevi
 
         private void ProcessFile_Click(object sender, RoutedEventArgs e)
         {
-            Dictionary<String, double> Comparement = new Dictionary<string, double>();
+            k = Convert.ToInt32(textBox_kValue.Text);
+
+            Dictionary<String, double> Filename_Distance = new Dictionary<string, double>();
 
             foreach (String DatasetFile in Dataset)
             {
-                Comparement.Add(
+                Filename_Distance.Add(
                     DatasetFile,
                     CompareBitmaps( GetBitmap(DatasetFile), GetBitmap(File) ) 
                     );
             }
-            var c = Comparement.OrderBy(element => element.Value);
-            Console.WriteLine("En çok şuna benziyor: " + c.ElementAt(0).Key);
+
+            Filename_Distance = Filename_Distance.OrderBy(element => element.Value).ToDictionary(pair=>pair.Key, pair=>pair.Value);
+            
+
+            Dictionary<String, int> Filename_Repetition = new Dictionary<string, int>();
+
+            for(int i = 0; i < k; i++)
+            {
+                String key = System.IO.Path.GetFileName(Filename_Distance.ElementAt(i).Key).Split('_')[0];
+                if (!Filename_Repetition.ContainsKey(key))
+                {
+                    Filename_Repetition.Add(key, 0);
+                }
+                Filename_Repetition[key]++;
+            }
+
+            var c2 = Filename_Repetition.OrderBy(element => element.Value);
+
+            label2.Content = ("En çok şu sınıfa benziyor: " +  c2.ElementAt(0).Key);
         }
 
     }

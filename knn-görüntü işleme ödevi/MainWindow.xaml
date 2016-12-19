@@ -10,6 +10,10 @@
         <Button x:Name="SelectDataset" Content="Örnek set seç" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="115" Click="SelectDataset_Click"/>
         <Button x:Name="SelectFile" Content="Görüntü seç" HorizontalAlignment="Left" Margin="130,10,0,0" VerticalAlignment="Top" Width="75" Click="SelectFile_Click"/>
         <Button x:Name="ProcessFile" Content="İşle" HorizontalAlignment="Left" Margin="210,10,0,0" VerticalAlignment="Top" Width="75" Click="ProcessFile_Click"/>
+        <TextBox x:Name="textBox_kValue" HorizontalAlignment="Left" Height="23" Margin="290,11,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label" Content="K DEĞERİ^^^^" HorizontalAlignment="Left" Margin="290,39,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="SONUÇ:" HorizontalAlignment="Left" Margin="125,133,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="" HorizontalAlignment="Left" Margin="183,133,0,0" VerticalAlignment="Top" Width="324"/>
 
     </Grid>
 </Window>
